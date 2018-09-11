@@ -2,7 +2,7 @@
 *  Informatica 2 - 2018_2
 *  Prof: Juan Camilo Correa Chica
 *  Fecha: Septiembre 10/2018 - Septiembre 17/2018 - Septiembre 24/2018
-*  Plazo máximo para enviar enlace para clonar el repositorio: Septiembre 10/2018 10:00pm
+*  Plazo máximo para enviar enlace para clonar el repositorio: Septiembre 10/2018 11:00pm
 *  Estudiante1: Nombres y apellidos completos
 *  Estudiante2: Nombres y apellidos completos (Opcional, puede trabajar individualmente)
 *  Fecha del ultimo Commit en GitHub: Agregue la fecha y hora del ultimo Commit (aproximada)
