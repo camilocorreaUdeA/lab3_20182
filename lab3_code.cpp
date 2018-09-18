@@ -71,6 +71,14 @@ int main() {
    return 0;
 
 #endif
+ /* Practica de Laboratorio 3
+*  Informatica 2 - 2018_2
+*  Prof: Juan Camilo Correa Chica
+*  Fecha: Septiembre 10/2018 - Septiembre 17/2018 - Septiembre 24/2018
+*  Plazo máximo para enviar enlace para clonar el repositorio: Septiembre 17/2018 11:00pm
+*  Estudiante1: Dilan Rojas Marin
+*  Estudiante2: Nombres y apellidos completos (Opcional, puede trabajar individualmente)
+*  Fecha del ultimo Commit en GitHub: 18/09/2018 11:58 am
  /* 2. Diseñe e implemente una clase llamada "Movie" que tiene los siguientes atributos privados:
 * Un atributo de tipo entero para el ID de la pelicula
 * Un atributo de tipo cadena de caracteres para el nombre de la pelicula
