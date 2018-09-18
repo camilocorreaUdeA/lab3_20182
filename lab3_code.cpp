@@ -71,3 +71,117 @@ int main() {
    return 0;
 
 #endif
+ /* 2. Diseñe e implemente una clase llamada "Movie" que tiene los siguientes atributos privados:
+* Un atributo de tipo entero para el ID de la pelicula
+* Un atributo de tipo cadena de caracteres para el nombre de la pelicula
+* Un atributo de tipo cadena de caracteres para el genero de la pelicula
+* Un atributo de tipo cadena de caracteres para el director de la pelicula
+* Un atributo tipo float para el "rating promedio" de la pelicula (el rating es un valor de 0.0 a 5.0 con el que los cinefilos califican una pelicula)
+* Un atributo tipo int que almacena el número de veces que la pelicula ha sido calificada
+*
+* El "rating promedio" de una pelicula se calcula como el total de la suma de todas las calificaciones que se le han dado a una pelicula
+* sobre el numero de calificaciones.
+*
+* La clase debe contar con un constructor por defecto, un constructor para inicializar atributos al instanciar objetos de la clase y un
+* constructor por copia.
+* La clase debe contar con metodos para modificar y obtener el valor de cada atributo individualmente.
+*
+* 3. Utilizando la clase que acaba de implementar, diseñe una pequeña aplicacion que permite a un usuario calificar peliculas. Si la pelicula ya ha sido calificada previamente (es decir,
+* si ya existe en la base de datos) entonces debe pedirle al usuario una calificación de 0.0 a 5.0 para esa pelicula. Si la pelicula no está
+* en la base de datos, entonces el programa debe permitirle al usuario ingresar la nueva pelicula a la base de datos, con el diligenciamiento
+* de todos sus datos, incluida la calificación de la pelicula por supuesto.
+*
+* La aplicación debe tener una opcion que sirve para recomendar peliculas a los usuarios. Esta recomendación se debe hacer de acuerdo a la
+* popularidad y a la calificación de la pelicula. Es decir, se deben recomendar las peliculas con las calificaciones más altas y con el
+* mayor número de calificaciones recibidas, osea que no tiene sentido recomendar una pelicula que ha sido calificada con 5.0 pero tiene
+* una sola calificación de un aficionado al cine.
+*/
+ class Movie
+{private: 
+    int id_pelicula,* almacenamiento;
+    char nombre_pelicula;
+    char genero_pelicula;
+    char director_pelicula;
+    float * rating_pelicula;
+    
+public:
+    Movie(int id,char nombrepel,char genero,char director,float * rating, int * visitas);
+    Movie(Movie &movies);
+    
+    void rating_promedio(float *ratingpeli);
+    void devolver_idpelicula(int idpeli);
+    void devolver_nombrepelicula(char nombrepeli);
+    void devolver_generopelicula(char generopeli);
+    void devolver_directorpelicula(char directorpeli);
+    void contador_visitas (int *visitaspeli);
+ 
+};
+
+#endif // MOVIE_H
+ 
+ #include "movie.h"
+
+Movie::Movie(int _id,char _nombrepel,char _genero,char _director,float * _rating, int *_visitas)
+{
+   id_pelicula=_id;
+           nombre_pelicula=_nombrepel;
+           genero_pelicula=_genero;
+           director_pelicula=_director;
+           rating_pelicula=_rating;
+           almacenamiento=_visitas;
+    
+}
+    Movie::Movie(const Movie &movies)
+    {
+        nombre_pelicula=movies.nombre_pelicula;
+        genero_pelicula=movies.genero_pelicula;
+        director_pelicula=movies.director_pelicula;
+        rating_pelicula=movies.rating_pelicula;
+        almacenamiento=movies.almacenamiento;
+        
+        
+    }
+    
+    float Movie::rating_promedio()
+    { float promedio= *rating_pelicula/ *almacenamiento;
+        
+    }
+    void Movie::devolver_idpelicula(int idpeli)
+    {
+        id_pelicula=idpeli;
+        
+    }
+    void Movie::devolver_nombrepelicula(char nombrepeli)
+    {
+        nombrepeli=nombre_pelicula;
+        
+    }
+    void Movie::devolver_generopelicula(char generopeli)
+    {
+        generopeli=genero_pelicula;
+    }
+    void Movie::devolver_directorpelicula(char directorpeli){
+        directorpeli=director_pelicula;
+    }
+    void Movie::contador_visitas(int *visitas)
+    {
+        for i=0,
+    }
+ 
+ #include <iostream>
+#include "movie.h"
+#include<vector>
+using namespace std;
+vector<Movie> usuario;
+int main()
+{
+    Movie pelicula1(1702,"llegada de Dilan","terror","Dilan Rm",5.0,1);
+    Movie pelicula2(pelicula1);
+    
+    usuario.push_back(pelicula1);
+    usuario.push_back(pelicula2);
+
+    return 0;
+}
+
+
