@@ -191,5 +191,92 @@ int main()
 
     return 0;
 }
+/* Practica de Laboratorio 3
+*  Informatica 2 - 2018_2
+*  Prof: Juan Camilo Correa Chica
+*  Fecha: Septiembre 10/2018 - Septiembre 17/2018 - Septiembre 24/2018
+*  Plazo máximo para enviar enlace para clonar el repositorio: Septiembre 17/2018 11:00pm
+*  Estudiante1: Dilan Rojas Marin
+*  Estudiante2: Nombres y apellidos completos (Opcional, puede trabajar individualmente)
+*  Fecha del ultimo Commit en GitHub: 18/09/2018 11:58 am*/
 
+#include <iostream>
+#include <string>
+using namespace std;
 
+//Punto 3 el id, el nombre, la clasificación y la calificación de la pelicula
+class DetallesPelicula {
+private:
+       struct caracteristicas{
+       int id;
+       char titulo,clasificacion,calificacion;
+       }
+vector<DetallesPelicula> pelicula;
+public:
+       void agregar(int id,char nombre,char clasifi,char califi){
+       pelicula.id =id;
+       pelicula.titulo= nombre;
+       pelicula.calificacion=califi;
+       pelicula.clasificacion=clasifi;
+       }
+
+void imprimir(){
+             cout<< pelicula.id<<endl;
+             cout<< pelicula.nombre<<endl;
+             cout<< pelicula.califi<<endl;
+             cout<< pelicula.clasifi<<endl;
+       }
+
+};
+
+//Ahora ya se tiene la clase lista, ahora sigue la creación del main, el cual crea una instancia  de la clase, y agrega algunas variables necesarias para leer valores importantes, luego se llama el incluir y se envían los parámetros necesarios y se muestran finalmente, con un menú.
+
+int main(){
+       int cant;
+       DetallesPelicula Caracteristicas;
+       int opc,bandera
+      char nom,cali,clasi;
+       bool reco=false
+       bandera=1;
+       do {
+             cout <<"Informacion de las Peliculas"<<endl;
+             cout <<"------------------"<<endl;
+             cout <<"Escoge la accion a realizar: "<<endl;
+             cout <<"1. Agregar Pelicula"<<endl;
+             cout <<"2. Ver"<<endl;
+             cout <<"3. Salir"<<endl;
+             cin>>opc;
+             system("cls");
+             switch (opc){
+             case 1:{
+                          
+                           cout <<"Agrega el nombre: "<<endl;
+                       cin >> nom;
+                       cout <<"Agrega una calificacion: "<<endl;
+                       cin >> cal;
+                       cout <<"¿Recomendarias la pelicula? si o no? : "<<endl;
+                       cin >> reco;
+                       if reco= "yes";
+                            reco=true;
+                          cin >> reco;
+                             else 
+                              reco= false;
+                          cin >> reco;              
+                       cout <<"clasificacion: "<<endl;
+                       cin >> clas;
+                       caracteristicas.agregar(bandera++,nom,cali,clasi);
+                       break;
+                       system("cls");
+                       }
+             case 2: {
+       system("cls");
+                    cout <<"La pelicula es:"<<endl;
+                    caracteristicas.imprimir();   
+                    break;
+                           system("cls");
+                           }
+             }
+       }
+while (opc!=3);
+return 0;
+}
