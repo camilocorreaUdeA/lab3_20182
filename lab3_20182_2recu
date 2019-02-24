@@ -1,0 +1,15 @@
+/* Practica de recuperación */
+/* Esta practica es válida como recuperación de la práctica 3 del semestre 2018_2 */
+/* Si usted decide realizar esta práctica entoces su nota final en la práctica 3
+* será la que obtenga en esta misma práctica de recuperación */
+
+1. Diseñe e implemente una aplicación de "Carrito de compras on-line". Para esto usted debe implementar
+  una clase llamada Articulo, esta clase debe tener metodos para ingresar y obtener el nombre del Articulo,
+  metodos para ingresar y obtener el precio del articulo, metodos para ingresar y obtener el tipo de Articulo
+  (Aseo, Ddeportivo, Hogar, etc...). Debe contar tambien con metodos para fijar un descuento al precio del 
+  articulo, metodos para ingresar y obtener la disponiblidad de inventario del articulo. El carrito de compras
+  debe ser un vector (arreglo) de objetos de tipo Articulo. La aplicación debe tener un menu que permita ingresar
+  una lista de articulos a la tienda (el inventario de la tienda). Debe contar con una opción para agregar articulos
+  al carrito de compra. Y por último una opción que debe calcular la factura de compra calculando los descuentos
+  correspondientes de cada artículo.
+
